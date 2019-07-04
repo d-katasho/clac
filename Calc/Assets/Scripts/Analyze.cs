@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Analyze : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // List<IB.List> iBList;
+    public Analyze ()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool GetResult(float result)
     {
-        
+        return false;
     }
 }
