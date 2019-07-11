@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Analyze : MonoBehaviour
 {
-    // List<IB.List> iBList;
-    public Analyze ()
+    private List<Calc.IB> iBList;
+    public Analyze (List<Calc.IB> iBList)
     {
-
+        this.iBList = iBList;
     }
 
-    public bool GetResult(float result)
+    public bool GetResult(ref float result)
     {
-        return false;
+        result = 2;
+        return true;
+
+
+
+        //return false;
     }
 }
