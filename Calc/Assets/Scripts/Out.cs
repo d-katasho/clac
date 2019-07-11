@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Out : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private const string Error = "エラー" ;
 
-    // Update is called once per frame
-    void Update()
+    public string GetDispText()
     {
-        
+        List<Calc.IB> list = Calc.GetInputValueList();
+        Analyze analyze = new Analyze(list);
+        bool setresult;
+        float result = 0;
+        setresult = analyze.GetResult(ref result);
+        if (setresult)
+        {
+            return result.ToString();
+        }
+        else
+        {
+            return Error;
+        }
+
     }
 }
