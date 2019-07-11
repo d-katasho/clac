@@ -31,10 +31,10 @@ public class Calc : MonoBehaviour
     /// INで入力された値を格納する
     /// </summary>
     /// <returns></returns>
-    public static bool AddInputValue()
+    public static bool AddInputValue(IB iB)
     {
         //Array.Resize<List<IB>>(ref InputValueList, InputValueList.Count + 1);
-        InputValueList.Add(IB.IB0);
+        InputValueList.Add(iB);
         return true;
     }
 
@@ -44,8 +44,8 @@ public class Calc : MonoBehaviour
     /// <returns></returns>
     public static bool RemoveInputValueLast()
     {
-        InputValueList.Remove(IB.IB0);
-        return false;
+        InputValueList.RemoveAt(InputValueList.Count -1);
+        return true;
     }
 
     /// <summary>
@@ -54,7 +54,8 @@ public class Calc : MonoBehaviour
     /// <returns></returns>
     public static bool ClearInputValue()
     {
-        return false;
+        InputValueList.Clear();
+        return true;
     }
 
     /// <summary>
